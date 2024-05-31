@@ -42,6 +42,7 @@ jobs:
       - name: Test code
         id: run-tests
         run: npm run test
+        continue-on-error: true
 
       - name: Upload test report
         if: steps.run-tests.outcome == 'failure'
